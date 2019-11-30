@@ -4805,7 +4805,7 @@ public final class Settings {
          * Whether to show VoLTE icon or not
          * @hide
          */
-        public static final String SHOW_VOLTE_ICON = "volte_icon";
+        public static final String SHOW_VOLTE_ICON = "show_volte_icon";
 
 	/**
          * Whether or not to enable multiple audio focus.
@@ -4839,6 +4839,12 @@ public final class Settings {
          * @hide
          */
         public static final String KEY_HOME_LONG_PRESS_ACTION = "key_home_long_press_action";
+
+        /**
+         * VoLTE icon style
+         * @hide
+         */
+        public static final String VOLTE_ICON_STYLE = "volte_icon_style";
 
         /**
          * Action to perform when the home key is double-tapped.
@@ -5125,6 +5131,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(HIGH_TOUCH_SENSITIVITY_ENABLE);
             PRIVATE_SETTINGS.add(FOD_GESTURE);
             PRIVATE_SETTINGS.add(SHOW_VOLTE_ICON);
+            PRIVATE_SETTINGS.add(VOLTE_ICON_STYLE);
         }
 
         /**
