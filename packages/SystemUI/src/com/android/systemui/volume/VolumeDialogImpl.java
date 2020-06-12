@@ -558,12 +558,17 @@ public class VolumeDialogImpl implements VolumeDialog,
                 == BluetoothProfile.STATE_CONNECTED;
     }
 
-    public void initSettingsH() {
+    private boolean isNotificationStreamLinked() {
+        return Settings.Secure.getInt(mContext.getContentResolver(),
+                    Settings.Secure.VOLUME_LINK_NOTIFICATION, 1) == 1;
+    }
+
+    public void updateMediaOutputH() {
         if (mMediaOutputView != null) {
             mMediaOutputView.setVisibility(
                     mDeviceProvisionedController.isCurrentUserSetup() &&
                             mActivityManager.getLockTaskModeState() == LOCK_TASK_MODE_NONE &&
-                            isBluetoothA2dpConnected() ? VISIBLE : GONE);
+                            isBluetoothA2dpConnected() && mExpanded ? VISIBLE : GONE);
         }
         if (mMediaOutputIcon  != null) {
             mMediaOutputIcon .setOnClickListener(v -> {
@@ -575,6 +580,13 @@ public class VolumeDialogImpl implements VolumeDialog,
                 Dependency.get(ActivityStarter.class).startActivity(intent,
                         true /* dismissShade */);
             });
+        }
+    }
+
+    public void initSettingsH() {
+        updateMediaOutputH();
+        if (mAllyStream == -1) {
+            mAllyStream = mActiveStream;
         }
 
         if (mExpandRowsView != null) {
@@ -592,6 +604,8 @@ public class VolumeDialogImpl implements VolumeDialog,
                 if (mExpanded) mController.setActiveStream(AudioManager.STREAM_MUSIC);
                 mExpandRows.setExpanded(!mExpanded);
                 mExpanded = !mExpanded;
+
+                updateMediaOutputH();
             });
         }
     }
