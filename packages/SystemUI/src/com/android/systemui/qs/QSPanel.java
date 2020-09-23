@@ -126,8 +126,6 @@ public class QSPanel extends LinearLayout implements Tunable, Callback, Brightne
 
     @Nullable
     protected View mFooter;
-    @Nullable
-    protected View mDivider;
 
     protected View mDragHandle;
     private View mOtherPanel;
@@ -570,7 +568,6 @@ public class QSPanel extends LinearLayout implements Tunable, Callback, Brightne
     protected void onFinishInflate() {
         super.onFinishInflate();
         mFooter = findViewById(R.id.qs_footer);
-        mDivider = findViewById(R.id.divider);
         switchTileLayout(true /* force */);
     }
 
@@ -629,7 +626,6 @@ public class QSPanel extends LinearLayout implements Tunable, Callback, Brightne
             }*/
             updateTileLayoutMargins();
             updateFooterMargin();
-            updateDividerMargin();
             updateMediaDisappearParameters();
             updateMediaHostContentMargins();
             updateHorizontalLinearLayoutMargins();
@@ -1139,11 +1135,6 @@ public class QSPanel extends LinearLayout implements Tunable, Callback, Brightne
         return mSecurityFooter;
     }
 
-    @Nullable
-    public View getDivider() {
-        return mDivider;
-    }
-
     public void showDeviceMonitoringDialog() {
         if (mSecurityFooter != null) {
             mSecurityFooter.showDeviceMonitoringDialog();
@@ -1159,7 +1150,6 @@ public class QSPanel extends LinearLayout implements Tunable, Callback, Brightne
                 mContentMarginEnd - mVisualTilePadding);
         updateMediaHostContentMargins();
         updateFooterMargin();
-        updateDividerMargin();
     }
 
     private void updateFooterMargin() {
@@ -1199,11 +1189,6 @@ public class QSPanel extends LinearLayout implements Tunable, Callback, Brightne
             marginEnd = 0;
         }
         updateMargins((View) mTileLayout, mVisualMarginStart, marginEnd);
-    }
-
-    private void updateDividerMargin() {
-        if (mDivider == null) return;
-        updateMargins(mDivider, mContentMarginStart, mContentMarginEnd);
     }
 
     /**
