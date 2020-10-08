@@ -141,6 +141,8 @@ public class QSPanel extends LinearLayout implements Tunable, Callback, Brightne
     private int mVisualTilePadding;
     private boolean mUsingHorizontalLayout;
 
+    private boolean mQsMediaVisible;
+
     private QSCustomizer mCustomizePanel;
     private Record mDetailRecord;
 
@@ -228,6 +230,7 @@ public class QSPanel extends LinearLayout implements Tunable, Callback, Brightne
     }
 
     protected void onMediaVisibilityChanged(Boolean visible) {
+        mQsMediaVisible = visible;
         switchTileLayout();
         if (mMediaVisibilityChangedListener != null) {
             mMediaVisibilityChangedListener.accept(visible);
@@ -559,7 +562,7 @@ public class QSPanel extends LinearLayout implements Tunable, Callback, Brightne
         mIsLandscape = newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE;
         if (newConfig.orientation != mLastOrientation) {
             mLastOrientation = newConfig.orientation;
-            switchTileLayout();
+            switchTileLayout(true);
         }
     }
 
@@ -598,7 +601,6 @@ public class QSPanel extends LinearLayout implements Tunable, Callback, Brightne
             View visibleView = horizontal ? mHorizontalLinearLayout : (View) mRegularTileLayout;
             View hiddenView = horizontal ? (View) mRegularTileLayout : mHorizontalLinearLayout;
             ViewGroup newParent = horizontal ? mHorizontalContentContainer : this;
-            QSTileLayout newLayout = horizontal ? mHorizontalTileLayout : mRegularTileLayout;
             if (hiddenView != null &&
                     (mRegularTileLayout != mHorizontalTileLayout ||
                             hiddenView != mRegularTileLayout)) {
