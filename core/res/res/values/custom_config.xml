@@ -171,4 +171,13 @@
 
     <!-- Whether device supports in-display fingerprint when screen is turned off -->
     <bool name="config_supportsScreenOffInDisplayFingerprint">false</bool>
+
+    <string-array translatable="false" name="custom_config_globalActionsList">
+        <item>emergency</item>
+        <item>lockdown</item>
+        <item>power</item>
+        <item>restart</item>
+        <item>screenshot</item> <!--2 buttons nav-->
+    </string-array>
+
 </resources>
