@@ -67,4 +67,6 @@
     <dimen name="dismiss_all_button_width">55dp</dimen>
     <dimen name="dismiss_all_fab_src_size">30dp</dimen>
 
+    <!-- QS clock -->
+    <dimen name="qs_clock_start_20">20dp</dimen>
 </resources>
