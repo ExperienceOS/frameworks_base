@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!-- QS Drag handle -->
+    <color name="op_qs_footer_drag_handle">#ffc8c8c8</color>
+</resources>
