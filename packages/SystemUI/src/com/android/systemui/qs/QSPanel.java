@@ -676,6 +676,12 @@ public class QSPanel extends LinearLayout implements Tunable, Callback, Brightne
         if (mFooter != null) {
             // Then the footer with the settings
             switchToParent(mFooter, parent, index);
+            index++;
+        }
+
+        if (mOPFooterView != null) {
+            // Then the OPFooter with the brightness bar and settings
+            switchToParent(mOPFooterView, parent, index);
         }
     }
 
