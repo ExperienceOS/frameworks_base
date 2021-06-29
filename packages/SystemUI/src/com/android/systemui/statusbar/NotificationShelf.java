@@ -170,11 +170,6 @@ public class NotificationShelf extends ActivatableNotificationView implements
         }
     }
 
-    public void onOverlayChanged() {
-        initDimens();
-        updateBackgroundColors();
-    }
-
     @Override
     protected void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);

@@ -1200,10 +1200,6 @@ public class ExpandableNotificationRow extends ActivatableNotificationView
         reInflateViews();
     }
 
-    public void onOverlayChanged() {
-        onDensityOrFontScaleChanged();
-    }
-
     private void reInflateViews() {
         // Let's update our childrencontainer. This is intentionally not guarded with
         // mIsSummaryWithChildren since we might have had children but not anymore.
