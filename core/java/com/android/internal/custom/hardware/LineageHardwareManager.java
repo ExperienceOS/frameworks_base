@@ -863,4 +863,5 @@ public final class LineageHardwareManager {
         return true;
     }
 
+
 }
