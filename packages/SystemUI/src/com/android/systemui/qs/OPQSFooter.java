@@ -80,7 +80,6 @@ public class OPQSFooter extends LinearLayout {
     protected TouchAnimator mFooterAnimator;
     protected TouchAnimator mCarrierTextAnimator;
 
-    private SettingsButton mSettingsButton;
     private Boolean mExpanded;
     private Boolean mIsLandscape;
     private FrameLayout mFooterActions;
