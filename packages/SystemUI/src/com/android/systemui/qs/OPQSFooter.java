@@ -81,9 +81,7 @@ public class OPQSFooter extends LinearLayout {
     protected TouchAnimator mCarrierTextAnimator;
 
     private Boolean mExpanded;
-    private Boolean mIsLandscape;
     private FrameLayout mFooterActions;
-    private SettingsButton mSettingsButton;
     private DataUsageView mDataUsageView;
     private CarrierText mCarrierText;
     private boolean mIsLandscape = false;
