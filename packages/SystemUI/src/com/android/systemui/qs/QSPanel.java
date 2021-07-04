@@ -654,9 +654,9 @@ public class QSPanel extends LinearLayout implements Tunable, Callback, Brightne
         return true;
     }
 
-    /*protected boolean needsDynamicRowsAndColumns() {
+    protected boolean needsDynamicRowsAndColumns() {
         return false;
-    }*/
+    }
 
     private void switchAllContentToParent(ViewGroup parent, QSTileLayout newLayout) {
         int index = parent == this ? mMovableContentStartIndex : 0;
