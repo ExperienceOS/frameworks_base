@@ -182,4 +182,6 @@
 
     <!-- Whether device supports an alt. ambient display -->
     <bool name="config_alt_ambient_display">false</bool>
+
+    <string name="config_lightFontFamily" translatable="false">sans-serif</string>
 </resources>
