@@ -58,6 +58,8 @@
             android:gravity="center_vertical"
             android:ellipsize="marquee"
             android:singleLine="true"
+            android:clickable="true"
+            android:background="@drawable/ripple_drawable"
             android:textAppearance="@style/TextAppearance.QS.TileLabel"
             android:textColor="?android:attr/textColorPrimary"
             android:textDirection="locale"
