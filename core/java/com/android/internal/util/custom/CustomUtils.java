@@ -63,7 +63,9 @@ import android.view.KeyEvent;
 import com.android.internal.R;
 import com.android.internal.statusbar.IStatusBarService;
 
+import java.util.Arrays;
 import java.util.Locale;
+import java.util.List;
 
 public class CustomUtils {
     private static OverlayManager mOverlayService;

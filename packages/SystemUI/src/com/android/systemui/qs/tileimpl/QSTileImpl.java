@@ -71,6 +71,9 @@ import com.android.systemui.qs.QSHost;
 import com.android.systemui.qs.QuickStatusBarHeader;
 import com.android.systemui.qs.logging.QSLogger;
 
+import android.provider.Settings;
+import android.os.UserHandle;
+
 import java.io.FileDescriptor;
 import java.io.PrintWriter;
 import java.util.ArrayList;
