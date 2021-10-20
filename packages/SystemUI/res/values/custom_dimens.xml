@@ -67,6 +67,4 @@
     <dimen name="dismiss_all_button_width">55dp</dimen>
     <dimen name="dismiss_all_fab_src_size">30dp</dimen>
 
-    <!-- Per app volume -->
-    <dimen name="volume_row_app_icon_padding">8dp</dimen>        
 </resources>
