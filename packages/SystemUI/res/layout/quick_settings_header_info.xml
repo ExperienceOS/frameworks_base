@@ -27,8 +27,9 @@
 
 <LinearLayout 
     android:id="@+id/qsclockshit"
+    android:paddingTop="28dp"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="60dp"
     android:orientation="vertical">
 
     <TextClock
@@ -45,7 +46,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:singleLine="true"
-        android:textSize="16dp"
+        android:textSize="14dp"
         android:textAppearance="@style/TextAppearance.QS.Date"
         systemui:datePattern="@string/abbrev_wday_month_day_no_year_alarm" />
 </LinearLayout>
