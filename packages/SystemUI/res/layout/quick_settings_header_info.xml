@@ -27,9 +27,9 @@
 
 <LinearLayout 
     android:id="@+id/qsclockshit"
-    android:paddingTop="28dp"
+    android:paddingTop="18dp"
     android:layout_width="match_parent"
-    android:layout_height="60dp"
+    android:layout_height="90dp"
     android:orientation="vertical">
 
     <TextClock
@@ -38,13 +38,13 @@
         android:layout_width="match_parent"
         android:format12Hour="hh:mm"
         android:layout_height="wrap_content"
-        android:gravity="center"
+        android:gravity="left"
         android:textSize="40dp"/>
 
     <com.android.systemui.statusbar.policy.DateView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
+        android:gravity="left"
         android:singleLine="true"
         android:textSize="14dp"
         android:textAppearance="@style/TextAppearance.QS.Date"
